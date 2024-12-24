@@ -1,5 +1,5 @@
 // Globals
-let service_app_token = 'OGQzMGJmOWEtM2RlMi00OGUyLWJiM2QtODFiOGM2NGE1MzhmMzc1ZjVjNjAtYmY4_P0A1_b65d66a2-cba5-4212-88ab-bdc03b1d93aa';   // Update this value with your token
+let service_app_token = 'YTM5M2QxNjYtYTFjNC00ZWJmLWE0NjktN2I2Njc0Y2E4Yjg5NWI0NWI0MGItNjg5_P0A1_b65d66a2-cba5-4212-88ab-bdc03b1d93aa';   // Update this value with your token
 
 const guestToken = document.querySelector('#guest-token');
 const jweToken = document.querySelector('#jwt-token-for-dest');

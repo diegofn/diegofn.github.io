@@ -72,9 +72,20 @@
     </header>
     <main>
 
-    <!-- Click2Call CSS styles -->
+        <!-- Click2Call CSS styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
         #app-container {
             background-color: #ffffff;
             border-radius: 8px;
@@ -90,7 +101,7 @@
             height:60px;
             bottom:40px;
             right:40px;
-            background-color:#005072;
+            background-color:#2fa543;
             color:#FFF;
             border-radius:50px;
             text-align:center;
@@ -105,24 +116,24 @@
     </style>
     <!-- End Click2Call CSS styles -->
 
-<!-- Click2Call code -->
-<div id="app-container" style="display: none">
-    <div id="guest-container" class="hidden">
-        <input id="guest-token" name="jwtToken" placeholder="Guest Token" value="" type="text">
-        <input id="jwt-token-for-dest" name="jwtToken" placeholder="JWE token for destination" value="" type="text">
-        <audio id="remote-audio" autoplay></audio>
-        <p id="message"></p>
+    <!-- Click2Call code -->
+    <div id="app-container" style="display: none">
+        <div id="guest-container" class="hidden">
+            <input id="guest-token" name="jwtToken" placeholder="Guest Token" value="" type="text">
+            <input id="jwt-token-for-dest" name="jwtToken" placeholder="JWE token for destination" value="" type="text">
+            <audio id="remote-audio" autoplay></audio>
+            <p id="message"></p>
 
+        </div>
     </div>
-</div>
 
-<button id="callButton" class="float">
-    <i class="fa fa-phone my-float"></i>
-</button>   
-
-<script src="https://unpkg.com/webex@3.6.0-next.9/umd/calling.min.js"></script>
-<script src="./app.js"></script>
-<!-- End of Click2Call code -->
+    <button id="callButton" class="float">
+        <i class="fa fa-phone my-float"></i>
+    </button>   
+    
+    <script src="https://unpkg.com/webex@3.6.0-next.9/umd/calling.min.js"></script>
+    <script src="./app.js"></script>
+    <!-- End of Click2Call code -->
 
         <section class="inicio">
             <section id="hero">
