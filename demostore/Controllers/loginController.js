@@ -72,8 +72,8 @@ function iniciaSesion() {
 
     //La api no acepta otros por lo que usamos los predeterminados
     httpRequest.send(JSON.stringify({
-        username: "mor_2314",
-        password: "83r5^_"
+        username: username,
+        password: password
     }));
 }
 
