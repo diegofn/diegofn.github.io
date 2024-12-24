@@ -1,0 +1,77 @@
+/*------------VALORES INICIALES------------*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800&family=Yanone+Kaffeesatz&display=swap');
+
+::before *,
+::after * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.8;
+
+}
+
+:root {
+    /*Variables*/
+    --terciary-color: #ffffff;
+    --grey: rgba(219, 219, 219, 0.508);
+    --primary-color: #000000;
+
+    --fucsia: #A21F6B;
+    --dark-blue:#0B1546; 
+    --dark-grey: #343434;
+
+    /*Estilo del texto*/    
+    font-size: 65.5%;/*10px*/
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: var(--terciary-color);
+
+}
+
+body {
+    font-size: 150%;
+
+    background-color: var(--terciary-color);
+}
+
+h1 {
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    font-size: 200%;    
+}
+li p, h2,h1{
+    
+    font-family: 'Cinzel', serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--terciary-color);
+}
+i{ 
+    cursor:pointer;}
+
+
+/*------------BODY------------*/
+body {
+    width: 98vw;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 17rem fit-content(100%) fit-content(10rem);
+    grid-column-gap: 0px;
+    grid-row-gap: 5px;
+    overflow-x: hidden;
+}
+
+/*------------MAIN------------*/
+main {
+    grid-area: 2 / 1 / 3/ 10;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+main section{
+    border-radius: 2rem;
+}
