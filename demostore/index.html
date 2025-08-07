@@ -189,27 +189,28 @@
                 <p>Llamanos: </p><a href="https://webexcc-clicktocall.onrender.com/customcrm?WXCC_Username=dnieto-4xof.wbx.ai&Destination=5612357699">5612357699</a>
                 <br/>
 
-                <button type="button" onclick="wxcc_call('dnieto-4xof.wbx.ai', '5612357699')">Llamar 5612357699</button>
+                <button id="callbutton" phone="5612357699" user="dnieto-4xof.wbx.ai">Call 5612357699</button>
+
+                <div id="result"></div>
 
                 <script>
-                function wxcc_call(user, phone) {
-                fetch('https://webexcc-clicktocall.onrender.com/customcrm', {
-                    method: 'POST',
-                    headers: {
-                    'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ WXCC_Username: user, Destination: phone}) 
-                })
-                .then(response => response.json())
-                .then(data => {
-                    // Acciones en respuesta a la respuesta del servicio
-                    console.log(data);
-                })
-                .catch(error => {
-                    // Manejo de errores
-                    console.error('Error:', error);
+                document.getElementById("callbutton").addEventListener("click", function() {
+                    var phone = this.getAttribute("phone");
+                    var user = this.getAttribute("user");
+
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        document.getElementById("result").textContent = xhr.responseText;
+                    } else {
+                        document.getElementById("result").textContent = "Error: " + xhr.status;
+                    }
+                    };
+
+                    xhr.open("GET", "https://webexcc-clicktocall.onrender.com/customcrm?WXCC_Username=" + encodeURIComponent(user) + "&Destination=" + encodeURIComponent(phone));
+                    xhr.send();
                 });
-                }
                 </script>
 
                 <br/>
