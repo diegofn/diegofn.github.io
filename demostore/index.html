@@ -186,6 +186,34 @@
             </section>
             <section id="recibe-ofertas">
                 <h1>Recibe ofertas</h1>
+                <p>Llamanos: </p><a href="https://webexcc-clicktocall.onrender.com/customcrm?WXCC_Username=dnieto-4xof.wbx.ai&Destination=5612357699">5612357699</a>
+                <br/>
+
+                <button type="button" onclick="wxcc_call('dnieto-4xof.wbx.ai', '5612357699')">Llamar 5612357699</button>
+
+                <script>
+                function wxcc_call(user, phone) {
+                fetch('https://webexcc-clicktocall.onrender.com/customcrm', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ WXCC_Username: user, Destination: phone}) 
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Acciones en respuesta a la respuesta del servicio
+                    console.log(data);
+                })
+                .catch(error => {
+                    // Manejo de errores
+                    console.error('Error:', error);
+                });
+                }
+                </script>
+
+                <br/>
+
                 <form>
                     <input type="email" id="correo" placeholder="Correo electrónico">
                     <input type="submit" value="Subscribirme" id="subscribe">
