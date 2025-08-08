@@ -186,18 +186,16 @@
             </section>
             <section id="recibe-ofertas">
                 <h1>Recibe ofertas</h1>
-                <p>Llamanos: </p><a href="https://webexcc-clicktocall.onrender.com/customcrm?WXCC_Username=dnieto-4xof.wbx.ai&Destination=5612357699">5612357699</a>
+                <p>Llamanos: </p><a href="https://webexcc-clicktocall.onrender.com/customcrm?Destination=5612357699">5612357699</a>
                 <br/>
 
-                <button id="callbutton" phone="5612357699" user="dnieto-4xof.wbx.ai">Call 5612357699</button>
+                <button id="callbutton" phone="5612357699">Call 5612357699</button>
 
                 <div id="result"></div>
 
                 <script>
                 document.getElementById("callbutton").addEventListener("click", function() {
                     var phone = this.getAttribute("phone");
-                    var user = this.getAttribute("user");
-
                     var xhr = new XMLHttpRequest();
 
                     xhr.onload = function() {
@@ -208,7 +206,7 @@
                     }
                     };
 
-                    xhr.open("GET", "https://webexcc-clicktocall.onrender.com/customcrm?WXCC_Username=" + encodeURIComponent(user) + "&Destination=" + encodeURIComponent(phone));
+                    xhr.open("GET", "https://webexcc-clicktocall.onrender.com/customcrm?Destination=" + encodeURIComponent(phone));
                     xhr.send();
                 });
                 </script>
