@@ -186,8 +186,9 @@
             </section>
             <section id="recibe-ofertas">
                 <h1>Recibe ofertas</h1>
-                <p>Llamanos: </p><a href="https://puma-major-fawn.ngrok-free.app/customcrm?WxCCUser=User1&Destination=5612357699">5612357699</a>
-                <p>Llamanos: </p><a href="https://puma-major-fawn.ngrok-free.app/customcrm?WxCCUser=User2&Destination=5612357699">5612357699</a>
+                <p>Llamanos: </p><a href="https://webexcc-clicktocall.onrender.com/customcrm?WxCCUser=User1&Destination=5612357699">5612357699</a>
+                <p>Llamanos: </p><a href="https://webexcc-clicktocall.onrender.com/customcrm?WxCCUser=User2&Destination=5612357699">5612357699</a>
+                <p>Llamanos: </p><a href="https://puma-major-fawn.ngrok-free.app//customcrm?WxCCUser=User1&Destination=5612357699">5612357699</a>
                 <br/>
 
                 <button id="callbutton" user="user1" phone="5612357699">Call 5612357699 in user1</button>
@@ -211,6 +212,7 @@
                 });
 
                 function makeCall(user, phone) {
+                    var xhr = new XMLHttpRequest();
                     xhr.onload = function() {
                     if (xhr.status === 200) {
                         document.getElementById("result").textContent = xhr.responseText;
